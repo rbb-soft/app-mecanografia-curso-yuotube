@@ -5,6 +5,8 @@ Una aplicación web interactiva para practicar mecanografía, que incluye un tec
 
 📺 **Video del proyecto**: [https://youtu.be/UgGkwEk-B60](https://youtu.be/UgGkwEk-B60)
 
+[Demo](https://rbb-soft.github.io/app-mecanografia-curso-yuotube)
+
 ---
 
 ## ✨ Características
