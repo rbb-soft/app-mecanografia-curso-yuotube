@@ -1,0 +1,203 @@
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.controles {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.controles button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.teclado-contenedor {
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 12px;
+    border: 1px solid #343a40 ;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px; 
+}
+
+.pantalla-teclas, .ejercicios-teclas {
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 10px;
+    min-width: 70vw;
+    height: 50px;
+    padding-left: 30px; 
+    padding-right: 30px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: #e9ecef;
+    color: #495057;
+    
+    /* Display table-cell para centrado vertical */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.pantalla-teclas span, .ejercicios-teclas span{
+    font-size: 1.8em;
+    padding: 0px;
+    margin: 0px;
+}
+
+.fila-teclado {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.tecla {
+    background-color: #f8f9fa;
+    border: 1px solid #adb5bd;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 4px;
+    font-size: 1em; /* Ajustado para mejor visualización */
+    font-weight: bold;
+    color: #495057;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    min-width: 40px; /* Ancho mínimo para teclas */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+    user-select: none; /* Evita la selección de texto al hacer clic */
+}
+
+.tecla:hover {
+    background-color: #e9ecef;
+}
+
+.tecla:active, .tecla.activa {
+    background-color: #007bff;
+    color: white;
+    transform: scale(0.95);
+}
+
+/* Tamaños especiales para algunas teclas */
+.tecla-espacio {
+    flex-grow: 5;
+    min-width: 200px;
+}
+.tecla-enter, .tecla-shift, .tecla-caps, .tecla-tab, .tecla-backspace {
+    flex-grow: 1.5;
+    min-width: 80px;
+}
+.tecla-ctrl, .tecla-alt, .tecla-meta {
+    min-width: 60px;
+}
+
+/* Estilos para teclas con múltiples caracteres */
+.tecla .char-principal {
+    font-size: 1em;
+}
+.tecla .char-secundario {
+    font-size: 0.7em;
+    color: #6c757d;
+    position: absolute;
+    top: 2px;
+    right: 4px;
+}
+.tecla.activa .char-secundario {
+    color: #e0e0e0;
+}
+
+.info-tecla-presionada {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #343a40;
+    padding: 5px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    min-height: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .teclado-contenedor {
+        padding: 15px;
+    }
+    .pantalla-teclas,.ejercicios-teclas {
+        width: 100%;
+        font-size: 1.5em;
+        height: 40px;
+    }
+    .pantalla-teclas span, .ejercicios-teclas span{
+    font-size: 1.2em;
+    padding: 0px;
+    margin: 0px;
+}
+    .tecla {
+        padding: 8px;
+        margin: 3px;
+        font-size: 0.9em;
+        min-width: 35px;
+        height: 35px;
+    }
+    .fila-teclado {
+            margin-bottom: 6px;
+    }
+}
+    @media (max-width: 480px) {
+    .teclado-contenedor {
+        padding: 10px;
+    }
+    .pantalla-teclas,.ejercicios-teclas {
+        font-size: 1.2em;
+        height: 40px;
+    }
+    .pantalla-teclas span, .ejercicios-teclas span{
+        width: 100%;
+        font-size: 1em;
+        padding: 0px;
+        margin: 0px;
+    }   
+    .tecla {
+        padding: 6px;
+        margin: 2px;
+        font-size: 0.7em;
+        min-width: 25px; /* Aún más pequeño para móviles */
+        height: 30px;
+    }
+        .fila-teclado {
+            margin-bottom: 4px;
+    }
+    .tecla-espacio {
+        min-width: 150px;
+    }
+    .tecla-enter, .tecla-shift, .tecla-caps, .tecla-tab, .tecla-backspace {
+        min-width: 60px;
+    }
+}
