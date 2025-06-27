@@ -13,8 +13,6 @@ Una aplicación web interactiva para practicar mecanografía, que incluye un tec
 
 - Visualización en tiempo real del teclado virtual.
 - Detección de errores al escribir.
-- Conteo de palabras por minuto (WPM).
-- Modo oscuro.
 - Detección de teclas especiales (incluyendo `Shift`, `Enter`, `Backspace`, etc).
 - Manejo parcial de `Caps Lock` (limitado por el navegador).
 - 100% JavaScript puro (sin frameworks).
